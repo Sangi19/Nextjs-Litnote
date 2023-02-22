@@ -27,7 +27,10 @@ export default function User({user}) {
             <Link href="/user/Post">
                <Button size="small">Post</Button>
             </Link>            
-            <Link href="/user/Album">
+            <Link href={{ 
+              pathname:"/user/Album",
+              query: {id:user.id }// the data
+           }}>
                <Button size="small">Album</Button>
             </Link>
       </CardActions>

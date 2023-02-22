@@ -6,12 +6,11 @@ import { useEffect, useState } from 'react';
 export default function Todo() {
   
   const router = useRouter();
-const data = router.query;
+  const data = router.query;
 
   const [todoList, setTodoList] = useState([])
 
   async function todosListFn() {
-
     const fetchtodosData= await fetch(`https://jsonplaceholder.typicode.com/todos?userId=${data.id}`) 
     const todosData= await fetchtodosData.json()
     setTodoList(todosData)
@@ -31,8 +30,7 @@ const data = router.query;
               <li>* {item.title}</li>
                 )):'no todo found'}
           </ul>
-            <Button>                
-
+            <Button>               
               <Link href="/">Back to the todosList</Link>
             </Button>
         </h2>

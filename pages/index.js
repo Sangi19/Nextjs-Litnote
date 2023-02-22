@@ -25,15 +25,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={styles.main}>
-        <h3>LitNote-Next App</h3>
+          <h3>LitNote-Next App</h3>
           <div className='UserListComponent'>
             <UserList usersList={usersList} />
           </div>
-
-        {/* <div className={styles.grid}>
-         <div className={styles.card}>
-         </div> 
-        </div> */}
       </main>
     </>
   )
