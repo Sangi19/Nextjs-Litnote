@@ -19,7 +19,7 @@ export default function UserList({usersList}) {
     >
         <div>
             {usersList.map(user=> 
-                <User key={user.id}user={user} />
+                <User key={user.id} user={user} />
             )}
         </div>
 
