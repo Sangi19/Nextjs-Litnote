@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
+import { useState } from 'react';
 
 
 
@@ -16,8 +17,18 @@ export default function User({user}) {
         </Typography>
       </CardContent>
       <CardActions>
-            <Link href="/user/Todo">
+            <Link   
+                href={{
+                pathname: "/user/Todo",
+                query: {id:user.id }// the data
+              }}  >
                <Button size="small">Todo</Button>
+            </Link>
+            <Link href="/user/Post">
+               <Button size="small">Post</Button>
+            </Link>            
+            <Link href="/user/Album">
+               <Button size="small">Album</Button>
             </Link>
       </CardActions>
     </Card>
