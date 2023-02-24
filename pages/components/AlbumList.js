@@ -1,15 +1,15 @@
 import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import Link from 'next/link';
-import { Card, CardContent } from '@mui/material';
+import { Button, Card, CardContent } from '@mui/material';
 
 export default function AlbumList({albumList}) {
+
+  
   return (
     <div>
         <Link   
             href={{
-            pathname: "/user/Todo",
+            pathname: "/components/SingleAlbum",
             query: {id:albumList.id }// the data
           }}  >
             
@@ -25,6 +25,9 @@ export default function AlbumList({albumList}) {
                       <CardContent>{item.title}</CardContent>
                     </Card>
                 ))}
+                <Button>               
+                  <Link href="/">Back to the usersList</Link>
+                </Button>
               </CardContent>
             </Card>
         </Link>
