@@ -4,20 +4,43 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
+import { useState } from 'react';
 
 
 
 export default function User({user}) {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card 
+    sx={{
+      border: '1px solid',
+      p: 1,
+      m: 1,
+      borderRadius: 2,
+      fontSize: '0.875rem',
+      fontWeight: '700',
+    }}
+    >
       <CardContent>
         <Typography sx={{ mb: 1.5 }} color="text.primary">
           {user.name}
         </Typography>
       </CardContent>
       <CardActions>
-            <Link href="/user/Todo">
+            <Link   
+                href={{
+                pathname: "/user/Todo",
+                query: {id:user.id }// the data
+              }}  >
                <Button size="small">Todo</Button>
+            </Link>
+            <Link href="/user/Post">
+               <Button size="small">Post</Button>
+            </Link>            
+            <Link href={{ 
+              pathname:"/user/Albums",
+              query: {id:user.id }// the data
+           }}>
+               <Button size="small">Album</Button>
             </Link>
       </CardActions>
     </Card>
