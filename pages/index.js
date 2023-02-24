@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
-import UserList from './components/UserList'
+import UserList from './UserList'
 import Link from 'next/link';
 
 export default function Home() {

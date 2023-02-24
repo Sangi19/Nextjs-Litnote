@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
-import AlbumPhoto from './AlbumPhoto';
+import AlbumList from '../components/AlbumList';
 
-export default function Album() {
+export default function Albums() {
   const router = useRouter();
   const data = router.query;
   const [albumList, setAlbumList] = useState([])
@@ -21,7 +21,7 @@ export default function Album() {
     <div>
         <h5>Albums</h5>
         <ul>
-           <AlbumPhoto albumList={albumList}/>
+           <AlbumList albumList={albumList}/>
         </ul>
     </div>
   )
