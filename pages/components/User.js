@@ -10,7 +10,16 @@ import { useState } from 'react';
 
 export default function User({user}) {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card 
+    sx={{
+      border: '1px solid',
+      p: 1,
+      m: 1,
+      borderRadius: 2,
+      fontSize: '0.875rem',
+      fontWeight: '700',
+    }}
+    >
       <CardContent>
         <Typography sx={{ mb: 1.5 }} color="text.primary">
           {user.name}

@@ -5,24 +5,16 @@ import User from './components/User';
 export default function UserList({usersList}) {
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        bgcolor: 'background.default',
-        '& > :not(style)': {
-          m: 1,
-          width: '100%',
-          height: '100%',
-        },
-      }}
-    >
-        <div>
-            {usersList.map(user=> 
-                <User key={user.id} user={user} />
-            )}
-        </div>
-
-    </Box>
+    <div style={{ width: '100%' }}>
+      <Box
+        sx={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(3, 1fr)' }}
+      >
+          {usersList.map(user=> 
+            <User key={user.id} user={user} />
+          )}
+      </Box>
+    </div>
   );
 }

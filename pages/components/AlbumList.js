@@ -7,30 +7,26 @@ export default function AlbumList({albumList}) {
   
   return (
     <div>
-        <Link   
-            href={{
-            pathname: "/components/SingleAlbum",
-            query: {id:albumList.id }// the data
-          }}  >
-            
-            <Card 
-            // sx={{ 
-            //   display: 'flex',
-            //   flexWrap: 'wrap'
-            //   }}
-             >
+
+            <Card>
               <CardContent >
                 {albumList.map((item) => (
-                    <Card sx={{ maxWidth: 305,mb:1 }}>                
-                      <CardContent>{item.title}</CardContent>
+                    <Card sx={{ maxWidth: 305,mb:1 }}>
+                      <Link   
+                          href={{
+                          pathname: "/components/SingleAlbum",
+                          query: {id:item.id }// the data
+                        }}  >
+                          <CardContent>{item.title}</CardContent>
+                        </Link>
+
                     </Card>
                 ))}
                 <Button>               
                   <Link href="/">Back to the usersList</Link>
                 </Button>
               </CardContent>
-            </Card>
-        </Link>
+              </Card>
     </div>
   );
 }
