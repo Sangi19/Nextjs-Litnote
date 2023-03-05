@@ -3,6 +3,8 @@ import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
 import UserList from './UserList'
 import Link from 'next/link';
+import { Button } from '@mui/material';
+import { color } from '@mui/system';
 
 export default function Home() {
   const [usersList, setUsersList] = useState([])
@@ -27,6 +29,12 @@ export default function Home() {
       <main>
           <h3>LitNote-Next App</h3>
           <div className='UserListComponent'>
+            <div className='align-right'>
+              <Button variant="contained" color="success" size="medium"
+                sx={{p:1,mr:1}}
+                >Add User
+              </Button>
+            </div>
             <UserList usersList={usersList} />
           </div>
       </main>
