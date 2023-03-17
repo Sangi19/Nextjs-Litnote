@@ -41,7 +41,7 @@ export default function SingleAlbum({}) {
             />
           </ImageListItem>
         ))} 
-      </ImageList>
+      </ImageList> 
 
       <Button>               
         <Link href="/">Back to the Album</Link>

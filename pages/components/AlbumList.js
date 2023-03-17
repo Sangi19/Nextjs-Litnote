@@ -7,7 +7,6 @@ export default function AlbumList({albumList}) {
   
   return (
     <div>
-
             <Card>
               <CardContent >
                 {albumList.map((item) => (

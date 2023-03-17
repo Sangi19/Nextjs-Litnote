@@ -33,7 +33,12 @@ export default function User({user}) {
               }}  >
                <Button size="small">Todo</Button>
             </Link>
-            <Link href="/user/Post">
+            <Link 
+                href={{
+                  pathname: "/user/Post",
+                  query: {id:user.id }// the data
+                }}
+            >
                <Button size="small">Post</Button>
             </Link>            
             <Link href={{ 
